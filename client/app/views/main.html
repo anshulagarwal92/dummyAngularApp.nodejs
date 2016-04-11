@@ -1,0 +1,52 @@
+<div class="login-form" ng-controller="clientApp.controllers.MainCtrl">
+    <div class="">
+        <div class="">
+            <div class="login-part">
+                <div class="login-container">
+                    <form class="form-horizontal" name="login" novalidate="novalidate" ng-submit="submitted=true;login.$valid && loginUser()">
+                        <div class="form-group row">
+                            <label class="col-sm-3">Username <span class="form-required error" title="This field is required.">*</span></label>
+                            <div class="col-sm-9">
+                                <input type="text" required name="username" ng-model="username" Placeholder="Enter your email" class="form-control">
+                                <div class="error" ng-show="submitted && login.username.$invalid">
+                                    <span ng-show="login.username.$error.required">
+                                        Please enter your email.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3">Password <span class="form-required error" title="This field is required.">*</span></label>
+                            <div class="col-sm-9">
+                                <input type="password" name="password" ng-model="password" placeholder='Enter your password'  class="form-control" required>
+                                <div class="error" ng-show="submitted && login.password.$invalid">
+                                    <span ng-show="login.password.$error.required">
+                                        Please enter password.
+                                    </span>
+                                </div>
+                                <a href="javascript:;" class="forgot-password">Forgot Password?</a>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-offset-3 col-sm-7">
+                                <button type="submit" class="btn btn-save">Login</button>
+                                <a class="btn btn-cancel" href="javascript:;">Reset</a>
+                            </div>
+                        </div>
+                        <div class="row or">
+                            <div class="col-sm-offset-3 col-sm-2">
+                                <p>OR</p>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-offset-3 col-sm-7">
+                                <button type="submit" class="btn btn-google">Sign Up with Google</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
