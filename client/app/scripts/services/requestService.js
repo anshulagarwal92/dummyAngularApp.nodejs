@@ -1,8 +1,9 @@
 /**
  * Created by anshul on 09/4/16.
  */
+ 'use strict';
 
-app.factory('requestService', ['$http', '$rootScope', function($http, $rootScope) {
+app.factory('requestService', ['$http', function($http) {
     var header = {};
     return function(url, data, type, callback) {
         // if(typeof $rootScope.token !== "undefined" && $rootScope.token != null) {
@@ -10,10 +11,10 @@ app.factory('requestService', ['$http', '$rootScope', function($http, $rootScope
         // }
         $http({method: type, url: url, data : data, headers : header})
             .success(function(data, status, headers, config){
-                callback(true, data, status, headers, config)
+                callback(true, data, status, headers, config);
             }).error(function(data, status, headers, config){
-                callback(false, data, status, headers, config)
+                callback(false, data, status, headers, config);
             });
 
-    }
+    };
 }]);

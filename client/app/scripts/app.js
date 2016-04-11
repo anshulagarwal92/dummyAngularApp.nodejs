@@ -12,6 +12,7 @@ var app = angular
   .module('clientApp', [
     // 'ngAnimate',
     'ngCookies',
+    'ClientApp.config',
     'ngResource',
     'ngRoute',
     'ngSanitize',

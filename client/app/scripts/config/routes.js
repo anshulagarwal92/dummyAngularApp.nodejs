@@ -1,3 +1,4 @@
+'use strict';
 
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.hashPrefix('!');
@@ -52,9 +53,9 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider.state(v.name, route);
     });
 
-    if(window.location.search != "") {
+    if(window.location.search !=="") {
         var fragmentArr =  window.location.search.split("/");
-        if(fragmentArr.length > 0 && fragmentArr[0] == '?_escaped_fragment_=') {
+        if(fragmentArr.length > 0 && fragmentArr[0] === '?_escaped_fragment_=') {
             var url = window.location.search.replace('?_escaped_fragment_=', '#!');
             window.location.href = url;
         }
