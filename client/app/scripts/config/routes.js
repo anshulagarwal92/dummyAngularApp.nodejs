@@ -5,6 +5,22 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise("/404.html");
     var routes = [
         {
+            name:"500",
+            url: "/500.html",
+            views: {
+                "main":   { templateUrl: "views/errors/500.html" }
+            },
+            title : 'Dummy App | 500',
+            description : "Your true Folk in Wedding Ceremony to assist you. We help people in negotiating with vendors of their choice. We build App-Card and free wedding website."
+        },{
+            name:"404",
+            url: "/404.html",
+            views: {
+                "main":   { templateUrl: "views/errors/404.html" }
+            },
+            title : 'Dummy App | 404',
+            description : "Your true Folk in Wedding Ceremony to assist you. We help people in negotiating with vendors of their choice. We build App-Card and free wedding website."
+        },{
             name:"home",
             url: "/",
             views: {
